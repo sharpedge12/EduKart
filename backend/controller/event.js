@@ -37,12 +37,12 @@ router.post(
             url: result.secure_url,
           });
         }
-
         const productData = req.body;
         productData.images = imagesLinks;
         productData.shop = shop;
-
+        
         const event = await Event.create(productData);
+        console.log("event ->" + event)
 
         res.status(201).json({
           success: true,

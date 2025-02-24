@@ -63,7 +63,7 @@ router.post("/create-shop", catchAsyncErrors(async (req, res, next) => {
 // create activation token
 const createActivationToken = (seller) => {
   return jwt.sign(seller, process.env.ACTIVATION_SECRET, {
-    expiresIn: "5m",
+    expiresIn: "20m",
   });
 };
 
@@ -78,19 +78,23 @@ router.post(
         activation_token,
         process.env.ACTIVATION_SECRET
       );
-
+      
       if (!newSeller) {
         return next(new ErrorHandler("Invalid token", 400));
       }
+      
       const { name, email, password, avatar, zipCode, address, phoneNumber } =
-        newSeller;
-
+      newSeller;
+      
+      
       let seller = await Shop.findOne({ email });
-
+      
       if (seller) {
+        console.log("error here");
         return next(new ErrorHandler("User already exists", 400));
       }
-
+      
+      
       seller = await Shop.create({
         name,
         email,
@@ -100,7 +104,7 @@ router.post(
         address,
         phoneNumber,
       });
-
+      
       sendShopToken(seller, 201, res);
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
