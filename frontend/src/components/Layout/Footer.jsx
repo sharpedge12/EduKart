@@ -37,9 +37,8 @@ const Footer = () => {
       <div className="grid grid-cols-1 sm:gird-cols-3 lg:grid-cols-4 gap-6 sm:px-8 px-5 py-16 sm:text-center">
         <ul className="px-5 text-center sm:text-start flex sm:block flex-col items-center">
           <img
-            src="https://shopo.quomodothemes.website/assets/images/logo.svg"
+            src="https://res.cloudinary.com/drthsaowz/image/upload/v1740340759/assets/od8a2veatlyucn4thfzc.webp"
             alt=""
-            style={{ filter: "brightness(0) invert(1)" }}
           />
           <br />
           <p>The home and elements needeed to create beatiful products.</p>

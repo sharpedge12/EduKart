@@ -1,18 +1,17 @@
-import React from 'react'
-import { AiOutlineGift } from 'react-icons/ai'
-import { BiMessageSquareDetail } from 'react-icons/bi'
-import { FiPackage, FiShoppingBag } from 'react-icons/fi'
-import { MdOutlineLocalOffer } from 'react-icons/md'
-import { useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { AiOutlineGift } from "react-icons/ai";
+import { MdOutlineLocalOffer } from "react-icons/md";
+import { FiPackage, FiShoppingBag } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { BiMessageSquareDetail } from "react-icons/bi";
 
-const AdminHeader = () => {
-    const {user} = useSelector((state) => state.user);
-
+const DashboardHeader = () => {
+  const { seller } = useSelector((state) => state.seller);
   return (
-         <div className="w-full h-[80px] bg-white shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
+    <div className="w-full h-[80px] bg-white shadow sticky top-0 left-0 z-30 flex items-center justify-between px-4">
       <div>
-        <Link to="/">
+        <Link to="/dashboard">
           <img
             src="https://res.cloudinary.com/drthsaowz/image/upload/v1740343846/assets/q8lbpbezbvj0sfuzlphx.png"
             alt=""
@@ -52,15 +51,17 @@ const AdminHeader = () => {
               className="mx-5 cursor-pointer"
             />
           </Link>
+          <Link to={`/shop/${seller._id}`}>
             <img
-              src={`${user?.avatar?.url}`}
+              src={`${seller.avatar?.url}`}
               alt=""
               className="w-[50px] h-[50px] rounded-full object-cover"
             />
+          </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AdminHeader
+export default DashboardHeader;
