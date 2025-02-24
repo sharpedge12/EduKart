@@ -9,7 +9,7 @@ import styles from "../../styles/styles";
 import { TfiGallery } from "react-icons/tfi";
 import socketIO from "socket.io-client";
 import { format } from "timeago.js";
-const ENDPOINT = "https://edukartsockett-1b5bseevj-sharps-projects-ffb9298c.vercel.app/";
+const ENDPOINT = "https://edukartsockett-1b5bseevj-sharps-projects-ffb9298c.vercel.app:4000";
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
 const DashboardMessages = () => {
