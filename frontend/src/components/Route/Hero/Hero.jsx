@@ -1,36 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "../../../styles/styles";
+import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
     <div
-      className={`relative min-h-[70vh] 800px:min-h-[80vh] w-full bg-no-repeat ${styles.noramlFlex}`}
+      className={`relative min-h-screen w-full bg-cover bg-center flex items-center justify-center text-center 800px:text-left`} 
       style={{
-        backgroundImage:
-          "url(https://themes.rslahmed.dev/rafcart/assets/images/banner-2.jpg)",
+        backgroundImage: "url(http://sbg.addu.edu.ph/wp-content/uploads/2020/06/digital-education.jpg)",
       }}
     >
-      <div className={`${styles.section} w-[90%] 800px:w-[60%]`}>
-        <h1
-          className={`text-[35px] leading-[1.2] 800px:text-[60px] text-[#3d3a3a] font-[600] capitalize`}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="w-[90%] 800px:w-[60%]"
+      >
+        <motion.h1 
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="text-[40px] leading-tight 800px:text-[65px] text-white font-bold"
         >
-          Best Collection for <br /> Skill Development
-        </h1>
-        <p className="pt-5 text-[16px] font-[Poppins] font-[400] text-[#000000ba]">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae,
-          assumenda? Quisquam itaque <br /> exercitationem labore vel, dolore
-          quidem asperiores, laudantium temporibus soluta optio consequatur{" "}
-          <br /> aliquam deserunt officia. Dolorum saepe nulla provident.
-        </p>
-        <Link to="/products" className="inline-block">
-            <div className={`${styles.button} mt-5`}>
-                 <span className="text-[#fff] font-[Poppins] text-[18px]">
-                    Shop Now
-                 </span>
-            </div>
+          Learn from the Best, <br className="hidden 800px:block" /> Anytime, Anywhere
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="mt-4 text-[18px] font-[Poppins] font-[400] text-white leading-[1.6]"
+        >
+          Join a diverse marketplace of top instructors and industry experts.<br/> Get access to high-quality courses across multiple domains.
+        </motion.p>
+        <Link to="/products" className="inline-block mt-6">
+          <motion.button
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 bg-[#ff9800] text-white text-[18px] font-[Poppins] rounded-md shadow-lg hover:bg-[#e68900] transition-all"
+          >
+            Browse Courses
+          </motion.button>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
