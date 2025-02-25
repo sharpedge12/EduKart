@@ -41,7 +41,7 @@ const Footer = () => {
             alt=""
           />
           <br />
-          <p>The home and elements needeed to create beatiful products.</p>
+          <p>The courses needed to make to better developer.</p>
           <div className="flex items-center mt-[15px]">
             <AiFillFacebook size={25} className="cursor-pointer" />
             <AiOutlineTwitter
