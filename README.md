@@ -1,139 +1,532 @@
-# EduKart - MERN Stack E-Commerce Platform
+<div align="center">
+      <img width="226" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740343769/assets/qiaeemd8gdorebq291fs.png">
 
-## Description
+## 🌟 MERN Marketplace 🌟
 
-EduKart is a full-stack e-commerce platform built with the MERN stack (MongoDB, Express, React, and Node.js). It provides a seamless shopping experience for users and includes an admin dashboard to manage products, orders, and user profiles.
+The MERN Marketplace application will allow users to become sellers, who can manage shops, and add the courses they want to sell in each shop. Admin can control functionality of Seller Users who visit MERN Marketplace will be able to search for and browse courses they want to buy, and add courses to their shopping cart to place an order.
 
-## Features
+</div>
 
-- User Authentication and Authorization (JWT)
-- Product browsing, searching, and filtering
-- Shopping Cart functionality
-- Payment integration
-- Admin dashboard for managing products, orders, and users
-- Cloudinary integration for image uploads
-- Responsive design
+## 🖥️ Tech Stack
+
+**Frontend:**
+
+![reactjs](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)&nbsp;
+![react-router](https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white)&nbsp;
+![redux](https://img.shields.io/badge/Redux-593D88?style=for-the-badge&logo=redux&logoColor=white)&nbsp;
+![tailwindcss](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)&nbsp;
+![mui](https://img.shields.io/badge/Material--UI-0081CB?style=for-the-badge&logo=material-ui&logoColor=white)&nbsp;
+![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)
+
+**Backend:**
+
+![nodejs](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)&nbsp;
+![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)&nbsp;
+![mongodb](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)&nbsp;
+![jwt](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)&nbsp;
+
+**Realtime Communication:**
+
+![socketio](https://img.shields.io/badge/Socket.io-010101?&style=for-the-badge&logo=Socket.io&logoColor=white)
+
+**package manager**
+
+![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)
+
+- **Show Error:** [Toastify](https://www.npmjs.com/package/react-toastify) <br/>
+- **Data Fetch from Backent:** [axios](https://www.npmjs.com/package/axios) <br/>
+- **Icons:** [react-icons](https://react-icons.github.io/react-icons/) <br/>
+- **Payment stripe:** [Strip](https://dashboard.stripe.com/login?redirect=%2Ftest%2Fpayments) <br/>
+- **Payment Paypal:** [Strip](https://www.paypal.com/in/home) <br/>
+- **Store Date in Cookes:** [js-cookie](https://www.npmjs.com/package/js-cookie) <br/>
+- **Sand maill to User,seller,Admin:** [nodemailer](https://www.npmjs.com/package/nodemailer) <br/>
+- **Store Img in Local Dev:** [multer](https://www.npmjs.com/package/multer)
+
+## 🚀 Features
+
+- User Authentication Pages 🚪
+  - User Signup 📝
+    - email verification
+    - upload a Profile image
+  - User Login 🔐
+- Home Page 🏠
+  - View all product uploads by seller 📃
+  - filter with the category 📊
+  - Best-selling product (Sort by Sold_out data) 💎
+  - All Product 📦
+  - All Event's 🎊
+  - FAQ 🙋
+- Filters for Sorting Posts 🗂️
+  - Sort posts by Clothes, Shows, gifts, etc...
+- User Search Bar 🔍
+  - Search for product 🔎
+  - Click on a user to go to the Product details page 👤
+- wish list ❤️
+  - store in cart 👀
+- Add to cart 🛒
+  - Check out for payment 💳
+    - we have 3 payment systems **Pay-pal**,**Strip**,**Cash of Delivery (COD)**
+- Apply Coupon Code for Discount 👉💥
+- Product Explore Page 🔍
+  - View Product from another seller 🌍
+  - View reviews from other users ⭐
+  - The eye button shows Product Details 👁
+  - Original Price and discount price 💵
+  - HowMeney Buy this product 🤝
+  - Inc and Dec product 📉 +
+  - Show Description of product 📃
+  - View Seller Profile 👥
+  - Chating with Seller 💬
+  - Show Seller Information 📋
+  - Show Related Products 🔗
+  - Add to wish list ❤️
+  - Add to Cart 🛒
+- User Profile Page 👤
+
+  - Edit your profile details - profile photo, name, email, phone number ✏️
+  - change Password 🔐
+  - View All Order 👨🏾‍💻.
+  - After Delivery of the product user can Refund the product. 🔙
+  - User inbox Chat with the seller. ✉️
+  - Use can Track Orders. 🛤️
+  - Store 3 Address Details. Like Default, Home, office. 📫
+  - **Only Admin show Admin Dashboard** 👑
+  - Logout 🔚
+  - Create a Review After Delivery Product 🚛
+  - After the Buy product is Sold out is increased. and Stock decrease in DB.
+
+- Message ✉️
+  - Sand Image 🖼️
+  - Show active or not 🟢
+  - Time of sand Message ⏰
+- Popular Events 💥
+  - Show Recent Events
+- Responsive 📱
+  - All screens are responsive
+- Alerts 🚨
+  - Alerts in the app to notify users about success/failure operations
+- Seller Authentication Pages 🚪
+  - Seller Signup 📝
+    - shop name, Phone Number, Email address, Address,Zip Code, Password ✍
+    - upload a Profile image 📷
+    - email verification ✅
+  - Seller Login 🔐
+- Seller Dashboard 👨🏻‍🔧
+  - Overview of a Product and Latest Orders 🖇️
+  - Account Balance (with 10% service charge) 💰
+- All Orders ⚖
+  - Seller Update Product Delivery status 📆
+  - Create Products ✔️
+    - name\*
+    - Description \*
+    - Category \* like:- Computer and Laptops, Cosmetics and body care, Accessories, clothes,Shoes, Gifts, Pet Care, Mobile and Tablets, Music and Gaming, Other 🧩
+  - All product 💻
+    - Seller can delete Product ❌
+    - View all Products 📦
+- Create an Event 💥🎉
+  - name\* 📇
+  - Description \*
+  - Category \* like:- Computer and Laptops, Cosmetics and body care,Accessories, Clothes, Shoes,Gifts, Pet Care, Mobile and Tablets, Music and Gaming, Other
+  - Tags
+  - Original Price
+  - Price (With Discount) \*
+  - Product Stock \*
+  - Event Start Date \* ✅
+  - Event End Date \* (Default 3 days) ⛔
+  - Upload multiple Images \* 📷
+- All Event 🎉
+  - Show Event 💥
+  - Delete Event ⛔
+- Withdraw Money 📥
+  - Add Bank Details 🏛️
+  - Not withdraw the highest amount of Balance 💱
+  - Sand mail to sell with amount 📩
+  - Delete Bank Details 🪧
+- Shop Inbox 📞
+  - All Messages 📬
+  - Sand Image to user 🖼️
+  - Show Activ function 🟢
+- Discount Codes 🎟️
+  - Create coupon code 🖱
+  - Delete coupon code 🛑
+  - apply all Products of the shop 🤩
+  - Can apply the specific product 1️⃣☝️
+- Refunds 🔙
+  - Seller can update the Status of the Product 🔄
+- Settings ⚛
+  - update Images, Shop Address, Shop Phone Number, Shop Zip Code ⛓
+  - Add Shop description 📖
+- Shop Desboard 🎰
+  - Shop Products 🌃
+  - Running Events 🎪
+  - Shop Reviews ⭐
+  - Log out ↪️
+- Admin Authentication Pages (normal user in DB roll in Admin) 🚪
+  - Admin Signup 📝
+  - Admin Login 🔐
+  - Overview 👔 - Total Earning 🤑 - All Sellers 👨‍🔧 - All Orders 🛍️ - Latest Orders 🔢
+  - Show All Orders of Seller's 🛍️
+  - Show All sellers and Delete ⛔
+  - Show All users and Delete 👨‍👩‍👦‍👦 ⛔
+  - All Products in DB. 👨🏻‍💻
+  - All Events of Seller 📢
+  - verify Seller Withdraw request and Sand mail to update's 📧
+  - if Delete images it also deletes from the local devise
+
+## Sneak Peek of Home Page 🙈 :
+
+![home](https://res.cloudinary.com/drthsaowz/image/upload/v1740483626/assets/Screenshot_2025-02-25_170852_m7qpeu.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486384/assets/Screenshot_2025-02-25_175607_swk9i3.png" alt="mockup"/></td>
+    <td><<img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486427/assets/Screenshot_2025-02-25_175657_wgcsea.png" alt="mockup"/></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486467/assets/Screenshot_2025-02-25_175735_sh2v1j.png"alt="mockup"/></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486518/assets/Screenshot_2025-02-25_175827_n77gid.png"alt="mockup"/></td>
+  </tr>
+</table>
+
+## User Profile Page 👥 :
+
+![userHome](https://res.cloudinary.com/drthsaowz/image/upload/v1740486692/assets/Screenshot_2025-02-25_180121_gtm7yu.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486740/assets/Screenshot_2025-02-25_180211_jsnvgm.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486843/assets/Screenshot_2025-02-25_180344_sr59ex.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486930/assets/Screenshot_2025-02-25_180522_yvwudv.png"></td>
+    <td><img width="958" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740486957/assets/Screenshot_2025-02-25_180549_qwtlss.png"></td>
+  </tr>
+</table>
+
+# Product Page ⚙️
+
+![productPage](https://res.cloudinary.com/drthsaowz/image/upload/v1740487021/assets/Screenshot_2025-02-25_180650_mwl1j9.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487061/assets/Screenshot_2025-02-25_180725_pmgvpr.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487110/assets/Screenshot_2025-02-25_180757_goibwm.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487126/assets/Screenshot_2025-02-25_180837_xbmbtp.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487166/assets/Screenshot_2025-02-25_180916_hygvjh.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487200/assets/Screenshot_2025-02-25_180949_yglwkf.png"></td>
+  </tr>
+</table>
+
+# 🧾 Receipt
+
+![receipt](https://res.cloudinary.com/drthsaowz/image/upload/v1740487793/assets/Screenshot_309_otzcfy.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487627/assets/Screenshot_302_c6jokd.png"></td>
+    <td><img width="956" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487628/assets/Screenshot_303_je3pw5.png"></td>
+  </tr>
+  <tr>
+    <td><img width="959" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487633/assets/Screenshot_304_dy0jni.png"></td>
+    <td><img width="955" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487635/assets/Screenshot_305_xzdoyr.png"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487637/assets/Screenshot_306_n6gzft.png"></td>
+    <td><img width="956" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740487637/assets/Screenshot_307_ymlon4.png"></td>
+  </tr>
+</table>
+
+# Seller page 🛍️
+
+![sellerPage](https://res.cloudinary.com/drthsaowz/image/upload/v1740488227/assets/Screenshot_310_qcl63n.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488227/assets/Screenshot_311_hgslbt.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488228/assets/Screenshot_312_dm6maz.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488229/assets/Screenshot_313_cnb1l5.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488230/assets/Screenshot_314_wwgk0m.png"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488235/assets/Screenshot_318_uwh97v.png"></td>
+    <td><img width="957" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488236/assets/Screenshot_319_w9wx2k.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488237/assets/Screenshot_320_d9eaw7.png"></td>
+  </tr>
+</table>
+
+# Admin Dashboard 👤
+
+![adminDashboard](https://res.cloudinary.com/drthsaowz/image/upload/v1740488630/assets/Screenshot_321_vj8h9d.png)
+
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488630/assets/Screenshot_322_nppiio.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488630/assets/Screenshot_323_jkdm2t.png"></td>
+  </tr>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488631/assets/Screenshot_324_o6bpof.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488633/assets/Screenshot_325_umsuai.png"></td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488634/assets/Screenshot_326_shp734.png"></td>
+    <td><img width="960" alt="image" src="https://res.cloudinary.com/drthsaowz/image/upload/v1740488635/assets/Screenshot_327_mcglwt.png"></td>
+  </tr>
+</table>
 
 ---
 
-## Pages and Screenshots
+## Project description 📝
 
-### 1. Home Page
+🌟 Introducing MERN Marketplace: A Revolutionary Multi-Vendor Website 🌟
 
-This is the main landing page of the application, displaying featured products and categories.
-![Home Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740483626/assets/Screenshot_2025-02-25_170852_m7qpeu.png)
+🚀 Dear LinkedIn Network, I am thrilled to announce the completion of my latest project, the MERN Marketplace! 🌟 This dynamic platform brings together buyers and sellers, offering a seamless online shopping experience with a plethora of innovative features.
 
----
+💡 Key Technologies:
+Front-End:
 
-### 2. Login Page
+React 18:- user interface <Br/>
 
-The login page allows users to enter their credentials and log in to their accounts.
-![Login Page](https://res.cloudinary.com/dqioxqal2/image/upload/v1729694713/2_kx0m3i.png)
+React Router: client-side routing <Br/>
 
----
+Redux: Employing Redux for state management, ensuring centralized data handling and seamless interactions between components.<Br/>
 
-### 3. Register Page
+Tailwind CSS: Leveraging the power of Tailwind CSS for streamlined and responsive UI design, enabling rapid development and customization. <Br/>
 
-New users can create an account by filling out this registration form.
-![Register Page](https://res.cloudinary.com/dqioxqal2/image/upload/v1729694713/3_ejlgyn.png)
+Material-UI: Integrating Material-UI components to enhance the visual appeal and usability of the website. <Br/>
 
----
+Back-End:
 
-### 4. Product Page
+Node.js: Utilizing Node.js as the server-side runtime environment to build scalable and efficient backend services. <Br/>
 
-Browse a list of products available on the platform.
-![Product Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740483833/assets/Screenshot_2025-02-25_171340_bk44mr.png)
+Express.js: Harnessing the power of Express.js, a fast and minimalist web application framework, to handle routing and middleware. <Br/>
 
----
+JWT (JSON Web Tokens): Implementing JWT-based authentication for secure and stateless user sessions. <Br/>
 
-### 5. Product Details Page
+MongoDB: Leveraging MongoDB, a NoSQL database, for efficient data storage and retrieval, enabling seamless scalability. <Br/>
 
-Detailed information about a specific product including price, description, and reviews.
-![Product Details Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740483872/assets/Screenshot_2025-02-25_171421_wdialf.png)
+Real-time Communication: Utilizing Socket.io to enable real-time communication between buyers, sellers, and the application server. <Br/>
 
----
+Yarn: Employing Yarn as the package manager to manage project dependencies efficiently. <Br/>
 
-### 6. Add to Cart Page
+Image Upload with Multer: Integrating Multer middleware to handle image uploads, ensuring seamless storage and retrieval of product images. <Br/>
 
-Users can add items to their shopping cart and review their cart before proceeding to checkout.
-![Add To Cart Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740484025/assets/Screenshot_2025-02-25_171653_tjihlr.png)
+Email Communication with Nodemailer: Implementing Nodemailer to facilitate email communication, including email verification and notifications. <Br/>
 
----
+💡 Key Features:
+1️⃣ User Authentication Pages 🚪
 
-### 7. Payment Page
+User Signup: Enable users to create accounts, complete with email verification and the option to upload a profile image. <Br/>
 
-A secure payment page where users can enter payment information to complete the purchase.
-![Payment Page](https://res.cloudinary.com/dqioxqal2/image/upload/v1729694713/8_ftoyzw.png)
+User Login: Secure login functionality to protect user accounts.
 
----
+2️⃣ Home Page 🏠
 
-### 8. User Profile Page
+View Seller Products: Showcase all product uploads by sellers, allowing users to browse and explore various offerings. <Br/>
 
-The user profile page allows users to view and update their personal details, view order history, etc.
-![User Profile Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740484188/assets/Screenshot_300_cqzzje.png)
+Category Filters: Implement filters to help users narrow down their search by selecting specific product categories. <Br/>
 
----
+Best-Selling Products: Highlight popular products based on the number of units sold, aiding users in making informed decisions. <Br/>
 
-### 9. Admin Dashboard
+Events Section: Display all upcoming events, fostering engagement and excitement among users.<Br/>
 
-Admins can manage products, view all orders, and handle user management.
-![Admin Dashboard](https://res.cloudinary.com/drthsaowz/image/upload/v1740484461/assets/Screenshot_301_aonvsv.png)
+Frequently Asked Questions (FAQ): Provide a dedicated section to address common user queries. <Br/>
 
----
+3️⃣ Filters for Sorting Posts 🗂️
 
-### 10. Admin Order Details Page
+Sort by Category: Enable users to filter posts by different categories, such as clothes, shoes, gifts, and more.
 
-View and manage order details from this page.
-![Admin Order Details](https://res.cloudinary.com/drthsaowz/image/upload/v1740484596/assets/Screenshot_2025-02-25_172614_xysqov.png)
+4️⃣ User Search Bar 🔍
 
----
+Search Functionality: Implement a robust search feature, allowing users to search for specific products or click on user profiles to view their offerings.
 
-### 11. Admin Product Page
+5️⃣ Wishlist and Cart Management ❤️🛒
 
-Admins can add, edit, and delete products.
-![Admin Product Page](https://res.cloudinary.com/drthsaowz/image/upload/v1740484363/assets/Screenshot_2025-02-25_172233_rdnary.png)
+Wishlist: Enable users to add products to their wishlist, saving them for future reference. <Br/>
 
----
+Add to Cart: Provide a seamless shopping experience by allowing users to add products to their cart for purchase. <Br/>
 
-## Technologies Used
+Checkout and Payment: Implement a secure payment system, supporting PayPal, Stripe, and Cash on Delivery (COD) options. <Br/>
 
-- **Frontend**: React, Redux, Tailwind CSS
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **File Storage**: Cloudinary for image uploads
-- **Payment Integration**: Stripe API
+Apply Coupon Code: Allow users to apply coupon codes for discounts during the checkout process. <Br/>
 
----
+6️⃣ Product Explore Page 🔍
+
+Detailed Product Information: Display product details, including original and discounted prices, descriptions, seller information, and related products. <Br/>
+
+Seller Interaction: Facilitate direct communication between users and sellers through chat functionality. <Br/>
+
+Reviews and Ratings: Showcase reviews and ratings from other users to help inform purchasing decisions. <Br/>
+
+7️⃣ User Profile Page 👤
+
+Profile Editing: Allow users to edit their profile details, including profile photos, names, email addresses, and phone numbers. <Br/>
+
+Order History: Provide users with an overview of all their previous orders, allowing them to track deliveries and request refunds if necessary. <Br/>
+
+Inbox and Chat: Enable users to communicate with sellers, fostering a seamless exchange of information. <Br/>
+
+Address Management: Allow users to store multiple addresses for efficient checkout, including default, home, and office options. <Br/>
+
+8️⃣ Seller Dashboard 👨🏻‍🔧
+
+Product and Order Management: Provide sellers with an overview of their products and the latest orders, along with the ability to update delivery statuses. <Br/>
+
+Event Creation: Allow sellers to create and manage events, including details such as event name, description, category, dates, and images. <Br/>
+
+Shop Settings: This enables sellers to update their shop information, including images, addresses, phone numbers, and descriptions. <Br/>
+
+Inbox and Communication: Facilitate communication between sellers and users, ensuring a smooth exchange of information. <Br/>
+
+9️⃣ Admin Dashboard 👑
+
+Admin Authentication: Implement secure login functionality for admins. <Br/>
+
+Overview and Analytics: Provide admins with an overview of total earnings, all sellers, all orders, and the latest orders. <Br/>
+
+Seller and User Management: Enable admins to manage sellers and users, including the ability to delete accounts if necessary. <Br/>
+
+Product and Event Management: Allow admins to view all products and events in the database, facilitating efficient management. <Br/>
+
+Withdrawal Management: Provide admins with the ability to verify seller withdrawal requests, update balances, and send email notifications. <Br/>
+
+Image Management: Enable admins to delete images, ensuring data integrity and storage optimization. <Br/>
+
+🚀 With the power of these cutting-edge technologies, the MERN Marketplace delivers a robust and feature-rich multi-vendor website. It ensures a seamless user experience, efficient data management, real-time communication, and secure transactions. Join me in revolutionizing the e-commerce experience by connecting buyers and sellers in a dynamic and user-friendly environment.
+
+Feel free to reach out to me for more information or to explore collaboration opportunities.
+
+#MERNMarketplace #Ecommerce #React #NodeJS #ExpressJS #MongoDB #SocketIO #TailwindCSS #MaterialUI #Innovation #OnlineShopping #RevolutionizingRetail
+
+#### _**IMPORTANT NOTE**_ -
+
+This project does not have a mongoDB connection setup. Set up the connection based on the environments below.
+
+- local development: create a config folder (make sure to name it .env) in the config folder, which exports your db.uri connection.
+- (make new folder `uploads`) in the backend.
 
 ## File structure
+
 #### `client` - Holds the client application
+
 - #### `public` - This holds all of our static files
 - #### `src`
-    - #### `assets` - This folder holds assets such as images, docs, and fonts
-    - #### `components` - This folder holds all of the different components that will make up our views
-    - #### `views` - These represent a unique page on the website i.e. Home or About. These are still normal react components.
-    - #### `App.js` - This is what renders all of our browser routes and different views
-    - #### `index.js` - This is what renders the react app by rendering App.js, should not change
+  - #### `assets` - This folder holds assets such as images, docs, and fonts
+  - #### `components` - This folder holds all of the different components that will make up our views
+    - Admin
+    - cart
+    - Checkout
+    - Events
+    - layout
+    - Logout
+    - Payment
+    - Products
+    - Profile
+    - Route
+    - Shop
+    - Signup
+    - Wishlist
+  - #### `pages` - This folder holds All pages Admin, shop, user
+    - Shop
+  - #### `redux` - This folder holds all states of the Web app
+    - action
+    - reducer
+  - #### `static` - This folder holds Static file like logo categorie
+  - #### `App.js` - This is what renders all of our browser routes and different views
+  - #### `index.js` - This is what renders the react app by rendering App.js, should not change
 - #### `package.json` - Defines npm behaviors and packages for the client
+
 #### `server` - Holds the server application
+
 - #### `config` - This holds our configuration files, like mongoDB uri
-- #### `controllers` - These hold all of the callback functions that each route will call
+- #### `controller` - These hold all of the callback functions that each route will call
+- #### `db` - These hold all of Data Base Connection
+- #### `middleware` - These hold all error handle
 - #### `models` - This holds all of our data models
-- #### `routes` - This holds all of our HTTP to URL path associations for each unique url
-- #### `tests` - This holds all of our server tests that we have defined
+- #### `uploads` - Store all image in hear
+- #### `utils` - This holds all of our HTTP to URL. jwtToken and sand mail, Token gentrare
+- #### `mlter.js` - Sand mail login
 - #### `server.js` - Defines npm behaviors and packages for the client
-#### `package.json` - Defines npm behaviors like the scripts defined in the next section of the README
+- #### `package.json` - Defines npm behaviors like the scripts defined in the next section of the README
+
+#### `socket` - Socket.io is use to chaing feacher
+
+- .env
+- index.js
+- package.json
+
 #### `.gitignore` - Tells git which files to ignore
+
 #### `README` - This file!
 
 ---
 
-## Installation and Setup
+💻 How to run the app locally! 🏃
 
-To run this project locally:
+### STEP-1
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/sharpedge12/EduKart
-   ```
+`git clone https://github.com/sharpedge12/EduKart`
+
+### STEP-2
+
+- `cd frontend`
+- `yarn install`
+- `yarn start`
+
+### STEP-3
+
+- `cd backend`
+- `yarn install`
+- create folder `uploads`
+- create `confilg` folder and a `.env` file
+- use your Cradincial in.env file
+
+```
+PORT = 8000
+DB_URL = ""
+JWT_SECRET_KEY = ""
+JWT_EXPIRES = 7d
+ACTIVATION_SECRET =
+SMPT_HOST = 'smtp.gmail.com'
+SMPT_PORT = 465
+SMPT_PASSWORD =
+SMPT_MAIL =
+STRIPE_API_KEY =
+STRIPE_SECRET_KEY =
+```
+
+- `yarn start`
+
+### STEP-4
+
+- `cd socket`
+- `yarn install`
+- create a `.env` file
+
+```
+PORT = 4000
+```
+
+- `yarn start`
+
+🙏 If you find this repo helpful then don't forget to give a star ❇️ to this repository. :)
+
+<p align="center"><a href="https://github.com/nastyox/Rando.js#nastyox"><img src="http://randojs.com/images/barsSmallTransparentBackground.gif" alt="Animated footer bars" width="100%"/></a></p>
+<br/>
+<p align="center"><a href="https://github.com/sharpedge12/EduKart#"><img src="http://randojs.com/images/backToTopButtonTransparentBackground.png" alt="Back to top" height="29"/></a></p>
+
+@copyright by Anshul Sharma 2025
