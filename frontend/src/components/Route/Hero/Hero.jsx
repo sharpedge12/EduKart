@@ -8,7 +8,7 @@ const Hero = () => {
     <div
       className={`relative min-h-screen w-full bg-cover bg-center flex items-center justify-center text-center 800px:text-left`} 
       style={{
-        backgroundImage: "url(http://sbg.addu.edu.ph/wp-content/uploads/2020/06/digital-education.jpg)",
+        backgroundImage: "url(https://res.cloudinary.com/drthsaowz/image/upload/v1740480807/assets/na9tscyef3pdowspageg.jpg)",
       }}
     >
       <motion.div
